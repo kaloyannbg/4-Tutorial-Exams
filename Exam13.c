@@ -2,27 +2,25 @@
 всичките символи с главна буква със съответните символи с малка
 буква.*/
 
-
 #include <stdio.h>
-#include <string.h>
 
-char isUpMakeSm(char someLetter); // my own function which make Upper letter to Small, Small will be small again
+char toLower(char letter); // my own function which make Upper letter to Small, Small will be small again
 
 int main() {
 
-     char str[] = "HELLO";
+     char str[] = "HELLO CODEACADEMY";
 
      printf("%s now is: ", str);
      int i = 0;
 
      for(i = 0; str[i] != '\0'; i++) {
-         printf("%c", isUpMakeSm(str[i]));
+         printf("%c", toLower(str[i]));
      }
 
      return 0;
 }
 
-char isUpMakeSm(char inputLetter) {
+char toLower(char letter) {
 
     const int alphaBetNum = 26;
 
@@ -53,12 +51,12 @@ char isUpMakeSm(char inputLetter) {
     counter = 0;
 
      for(currentLetter = 'A'; currentLetter <= 'Z'; currentLetter++) {
-        if(inputLetter == currentLetter) {
+        if(letter == currentLetter) {
             return arrSmallLetters[counter];
             break;
         }
         counter++;
     }
 
-    return inputLetter;
+    return letter;
 }
