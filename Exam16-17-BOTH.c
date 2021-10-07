@@ -29,6 +29,7 @@ int main() {
 
     printf("Ellipse Area with radiusA: %.2f and radiusB: %.2f is: %f\n", radiusOne, radiusTwo, ellipseArea(radiusOne, radiusTwo) );
 
+    return 0;
 }
 
 double circleArea(double radius) {
