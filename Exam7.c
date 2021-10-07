@@ -9,9 +9,11 @@ long long
 
 int main() {
 
-    double dVar = 0xBBBBBBBBBBBBBBBB;
-    long long int llVar = 0xBBBBBBBBBBBBBBBB;
-    unsigned long long int ullVar = 0xBBBBBBBBBBBBBBBB;
+    char arr[] = {0xBB, 0xBB, 0xBB, 0xBB, 0xBB, 0xBB, 0xBB, 0xBB};
+
+    double dVar = *arr; // this is the start adress of the array
+    long long int llVar = *arr; // this is the start adress of the array
+    unsigned long long int ullVar = *arr; // this is the start adress of the array
 
     printf("Double value: %lf\n", dVar);
     printf("Long Long Int value: %lld\n", llVar);
