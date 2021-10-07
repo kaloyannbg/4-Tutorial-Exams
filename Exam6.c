@@ -10,13 +10,13 @@ int main() {
 
     unsigned char data[] = {0xAA , 0xAA, 0xAA, 0xAA};  // write four consequtive bytes
 
-    float floatValue = *data;  // this is the start adress of the array
+    float floatValue = (float)*data;  // this is the start adress of the array
     printf("When data is refferenced as float: %f\n", floatValue);
 
-    signed int signedIntValue = *data;  // this is the start adress of the array
+    signed int signedIntValue = (signed int)*data;  // this is the start adress of the array
     printf("When data is refferenced as int: %d\n", signedIntValue);
 
-    unsigned int unsignedIntValue = *data; // this is the start adress of the array
+    unsigned int unsignedIntValue = (unsigned int)*data; // this is the start adress of the array
     printf("When data is refferenced as int: %u\n", unsignedIntValue);
 
     return 0;
