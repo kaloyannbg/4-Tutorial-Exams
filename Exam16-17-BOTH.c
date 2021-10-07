@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 
+const double PI = 3.14159;
 double circleArea(double radius);
 double ellipseArea(double radiusA, double radiusB);
 
@@ -32,8 +33,6 @@ int main() {
 
 double circleArea(double radius) {
 
-    const double PI = 3.14159;
-
     double area = PI * radius * radius;
 
     return area;
@@ -41,8 +40,6 @@ double circleArea(double radius) {
 }
 
 double ellipseArea(double radiusA, double radiusB) {
-
-    const double PI = 3.14159;
 
     double area = PI * radiusA * radiusB;
 
