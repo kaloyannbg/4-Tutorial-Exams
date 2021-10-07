@@ -8,7 +8,7 @@
 
 int main() {
 
-    char data[] = {0xAA , 0xAA, 0xAA, 0xAA};  // write four consequtive bytes
+    unsigned char data[] = {0xAA , 0xAA, 0xAA, 0xAA};  // write four consequtive bytes
 
     float floatValue = *data;  // this is the start adress of the array
     printf("When data is refferenced as float: %f\n", floatValue);
