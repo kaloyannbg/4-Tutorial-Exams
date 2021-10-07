@@ -2,6 +2,7 @@
 всичките символи с главна буква със съответните символи с малка
 буква.*/
 
+
 #include <stdio.h>
 
 char toLower(char letter); // my own function which make Upper letter to Small, Small will be small again
@@ -22,6 +23,8 @@ int main() {
 
 char toLower(char letter) {
 
+    // OTHER WAYS TO SAME RESULT, WE CAN CHECK:  if ( (letter >= 'A') && (letter <= 'Z' ) ) 
+
     const int alphaBetNum = 26;
 
     int upLetter = 'A';
@@ -36,13 +39,6 @@ char toLower(char letter) {
 
     int i = 0;
 
-    for(currentLetter = 'A'; currentLetter <= 'Z'; currentLetter++) {
-        arrUpperLetters[counter] = currentLetter;
-        counter++;
-    }
-
-    counter = 0;
-
      for(currentLetter = 'a'; currentLetter <= 'z'; currentLetter++) {
         arrSmallLetters[counter] = currentLetter;
         counter++;
@@ -53,7 +49,6 @@ char toLower(char letter) {
      for(currentLetter = 'A'; currentLetter <= 'Z'; currentLetter++) {
         if(letter == currentLetter) {
             return arrSmallLetters[counter];
-            break;
         }
         counter++;
     }
