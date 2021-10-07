@@ -9,7 +9,7 @@ long long
 
 int main() {
 
-    char arr[] = {0xBB, 0xBB, 0xBB, 0xBB, 0xBB, 0xBB, 0xBB, 0xBB};
+    unsigned char arr[] = {0xBB, 0xBB, 0xBB, 0xBB, 0xBB, 0xBB, 0xBB, 0xBB};
 
     double dVar = *arr; // this is the start adress of the array
     long long int llVar = *arr; // this is the start adress of the array
