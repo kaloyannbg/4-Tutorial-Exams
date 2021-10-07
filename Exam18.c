@@ -47,7 +47,8 @@ int main()
 
         if (caravansAvaiable != 3 || cempersAvaiable != 3 || carsAvaiable != 6)
         {
-            printf(" -- Avaiable vehicles: caravans: %d, cempers: %d, cars: %d -- \n \n", caravansAvaiable, cempersAvaiable, carsAvaiable);
+            printf(" -- Avaiable vehicles: caravans: %d, cempers: %d, cars: %d --\n", caravansAvaiable, cempersAvaiable, carsAvaiable);
+            printf(" -- Your bill at the moment: %.2fBGN \n\n ", totalAmount);
         }
 
         printMenu(caravanPrice, cemperPrice, carPrice);
