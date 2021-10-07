@@ -8,13 +8,30 @@
 
 int main() {
 
-    float fVar = 0xAAAAAAAA;
-    int iVar = 0xAAAAAAAA;
-    unsigned int uVar = 0xAAAAAAAA;
+    char data[] = {0xAA , 0xAA, 0xAA, 0xAA};  // write four consequtive bytes
 
-    printf("Float value: %f\n", fVar);
-    printf("Integer value: %d\n", iVar);
-    printf("Unsigned int value: %u\n", uVar);
+    float floatValue = *data;  // this is the start adress of the array
+    printf("When data is refferenced as float: %f\n", floatValue);
+
+    signed int signedIntValue = *data;  // this is the start adress of the array
+    printf("When data is refferenced as int: %d\n", signedIntValue);
+
+    unsigned int unsignedIntValue = *data; // this is the start adress of the array
+    printf("When data is refferenced as int: %u\n", unsignedIntValue);
 
     return 0;
 }
+
+
+/*
+
+when chars, the values are: [ k1(0xAA) | k2(0xAA) | k3(0xAA) | k4(0xAA)  ]
+when chars, the addresses are:  k1(1) | k2( a[k1]+ 1) | k3(  a[k2] + 1 ) | ...
+
+char c = *data
+int i = *data
+
+when int: [ k1(0xAA | ? | ? | ? ...... ) | k2( 0xAA| ? | ? | ? ...... ) | k3(0xAA | ? | ? | ? ......) | k4(0xAA| ? | ? | ? ......) ]
+when int, the addresses are:  k1(1) | k2( a[k1] + sizeof(int) ) | k2( a[k2] + intSize)
+int
+*/
